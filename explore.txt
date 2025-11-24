@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>pack n'fly.com</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('wow.jpg');
+            background-size: cover;
+            background-size: 100% 115%;
+            background-attachment: fixed;
+        }
+
+        .cards-container {
+            width: 50%;
+            position: absolute;
+            top: 170px;
+            right: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            text-align: center;
+            float: right;
+        }
+		.cards-container1 {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+	  margin-top: 100px;
+		}
+
+        .card {
+            width: calc(20% - 30px);
+            height: 200px;
+            display: inline-block;
+            padding: 15px 25px;
+            box-sizing: border-round;
+            cursor: pointer;
+            margin: 10px 15px;
+            background-position: center;
+            background-size: cover;
+            transition: transform 0.5s;
+            margin-right: 20px;
+            border: 2px solid #ccc;
+            border-radius: 15px;
+        }
+
+        .card p {
+            text-shadow: 0 0 10px #000;
+            font-size: 20px;
+            margin: 5px 0;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-7530px);
+            }
+        }
+
+		.navbar {
+            width: 85%;
+            margin: auto;
+            padding: 25px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 120px;
+            height: auto;
+            cursor: pointer;
+        }
+
+
+        .navbar ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar ul li {
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .navbar ul li::after {
+            content: '';
+            height: 3px;
+            width: 0;
+            background: #1B826E;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: 0.5s;
+        }
+
+        .navbar ul li:hover::after {
+            width: 100%;
+        }
+
+
+        .logo {
+            width: 120px;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .explore {
+            width: 60%;
+            text-align: justify;
+            padding: 20px;
+            font-family: serif;
+            font-size: 20px;
+            align-self: flex-start;
+        }
+
+        .explore h2 {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 60px;
+            color: #0DA183 ;
+            font-weight: 600;
+            transition: 0.5s;
+            margin-bottom: 10px;
+            text-align: left; 
+        }
+
+        .explore h2:hover {
+            -webkit-text-stroke: 2px #fff;
+            color: transparent;
+        }
+		.explore p{
+			color: #FBFCFC ;
+            text-align: justify;
+            padding: 20px;
+            font-family: serif;
+            font-size: 20px;
+            align-self: flex-start; 
+			margin-top: 50px;
+}
+			}
+
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="logo.png" class="logo">
+            <ul>
+                <li><a href="assesment5.html">HOME</a></li>
+                <li>
+				<a href="touristspot.html" target="_blank">TOURIST SPOT</a>
+                </li>
+                <li>
+				<a href="hotelwebpage.html" target="_blank">PLACE TO STAY</a>
+				</li>
+            </ul>
+        </div>
+    </div>
+    <div class="explore">
+        <h2>TOP 10 Best Asian Countries to visit</h2>
+		<p>
+                Discover Asia's wonders with us! Immerse yourself in rich cultures, 
+				</br>savor exotic cuisines, and explore breathtaking landscapes.  
+				</br>Our travel agency craft sunforgettable experiences, ensuring your   
+				</br>journey through Asia is nothing short of extraordinary.
+				</p>
+    </div>
+    <div class="cards-container">
+        <div class="card card1" style="background-image: url('phil.jpg');">
+        </div>
+
+        <div class="card card2" style="background-image: url('thailand.jpg');">
+        </div>
+
+        <div class="card card3" style="background-image: url('viet.jpg');">
+        </div>
+		
+	
+        <div class="card card4" style="background-image: url('south.jpg');">
+        </div>
+
+        <div class="card card5" style="background-image: url('singa.jpg');">
+        </div>
+
+        <div class="card card6" style="background-image: url('sri.jpg');">
+        </div>
+		</div>
+		<div class="cards-container1">
+        <div class="card card7" style="background-image: url('cambodia.jpg');">
+        </div>
+
+        <div class="card card8" style="background-image: url('china.jpg');">
+        </div>
+
+        <div class="card card9" style="background-image: url('indo.jpg');">
+        </div>
+
+        <div class="card card10" style="background-image: url('nepal.jpg');">
+        </div>
+    </div>
+</body>
+
+</html>

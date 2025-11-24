@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pack n'fly.com - Tourist Spots</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Verdana', sans-serif;
+            line-height: 1.6;
+        }
+
+        .first-bg {
+            background: url('destination.jpg') no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .second-bg {
+            background: url('secondbg.jpg') no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 40px 20px 60px;
+        }
+
+        .navbar {
+            width: 85%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 120px;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar ul li {
+            position: relative;
+        }
+
+        .navbar ul li::after {
+            content: '';
+            height: 3px;
+            width: 0;
+            background: #1B826E;
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            transition: width 0.4s ease;
+        }
+
+        .navbar ul li:hover::after {
+            width: 100%;
+        }
+
+        .content-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .wow-line {
+            width: 100%;
+            border-top: 3px solid #1B826E;
+            margin: 60px 0;
+        }
+
+        .section-header {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #0DA183;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-header strong {
+            color: #000;
+        }
+
+        .section-subheader {
+            font-family: 'Optima', sans-serif;
+            font-size: 36px;
+            color: #0DA183;
+            font-weight: 600;
+            margin-bottom: 40px;
+            line-height: 1.3;
+        }
+
+        .section-subheader strong {
+            color: #000;
+        }
+
+        .country-section {
+            margin-bottom: 80px;
+        }
+
+        .country-intro {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            margin-bottom: 50px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .country-intro img {
+            width: 280px;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .country-intro-text {
+            flex: 1;
+        }
+
+        .country-intro-text b {
+            display: block;
+            font-size: 28px;
+            color: #0DA183;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .country-intro-text p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .category-table {
+            width: 100%;
+            margin: 40px 0;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-header {
+            background: linear-gradient(135deg, #0DA183 0%, #117A65 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .spots-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 30px;
+        }
+
+        .spot-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .spot-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .spot-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .spot-card-content {
+            padding: 20px;
+        }
+
+        .spot-card-content b {
+            display: block;
+            font-size: 20px;
+            color: #0DA183;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .spot-card-content p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        footer {
+            background-color: #2C3E50;
+            padding: 30px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .footer-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .footer-contact {
+            font-size: 16px;
+        }
+
+        .footer-contact a {
+            color: white;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+
+        .footer-contact a:hover {
+            color: #1B826E;
+        }
+
+        @media (max-width: 768px) {
+            .country-intro {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .country-intro img {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .spots-container {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+
+            .section-header {
+                font-size: 24px;
+            }
+
+            .section-subheader {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="first-bg">
+        <div class="navbar">
+            <img src="logo.png" alt="Logo" class="logo">
+            <ul>
+                <li><a href="assesment5.html">HOME</a></li>
+                <li><a href="touristspot.html">TOURIST SPOT</a></li>
+                <li><a href="hotelwebpage.html">PLACE TO STAY</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="second-bg">
+        <div class="content-container">
+            <h2 class="section-header"><strong>BEST</strong> DESTINATIONS</h2>
+            <h3 class="section-subheader"><strong>WHERE DO YOU<br>WANT TO</strong> GO?</h3>
+
+            <!-- PHILIPPINES SECTION -->
+            <div class="country-section">
+                <div class="country-intro">
+                    <img src="phil.jpg" alt="Philippines">
+                    <div class="country-intro-text">
+                        <b>PHILIPPINES</b>
+                        <p>A visit to the Philippines promises an enchanting blend of pristine beaches, vibrant cultural experiences, and breathtaking landscapes. With its powdery white sands and crystal-clear waters, the country's beaches are a paradise for sun-seekers. Explore historical sites, bustling markets, and lively festivals that showcase the rich tapestry of Filipino heritage. Beyond the scenery, it's the warm hospitality of the people that makes a trip to the Philippines an unforgettable and heartwarming experience.</p>
+                    </div>
+                </div>
+
+                <!-- Islands Category -->
+                <div class="category-table">
+                    <div class="category-header">Islands</div>
+                    <div class="spots-container">
+                        <div class="spot-card">
+                            <img src="coron.jpg" alt="Kayangan Lake">
+                            <div class="spot-card-content">
+                                <b>Kayangan Lake, Coron, Palawan</b>
+                                <p>Kayangan Lake in Coron, Palawan, is a captivating destination celebrated for its stunning lagoon with vibrant blues and greens. The crystal-clear waters hide captivating rock formations, making it a popular spot for snorkeling and free-diving in Coron Palawan.</p>
+                            </div>
+                        </div>
+                        <div class="spot-card">
+                            <img src="puerto.jpg" alt="Puerto Princesa">
+                            <div class="spot-card-content">
+                                <b>Puerto Princesa Underground River</b>
+                                <p>A UNESCO World Heritage Site and one of the longest underground rivers in the world. Take a boat ride through the cave system, marveling at the stalactites, and spot unique wildlife like bats and freshwater crocodiles. The river's complex ecosystem has adapted to the underground environments over hundreds of years.</p>
+                            </div>
+                        </div>
+                        <div class="spot-card">
+                            <img src="siargao.jpg" alt="Siargao Island">
+                            <div class="spot-card-content">
+                                <b>Siargao Island, Philippines</b>
+                                <p>Siargao Island in the Philippines is a tropical paradise renowned for its pristine beaches and world-class surfing waves. Explore the island's vibrant landscapes, indulge in its laid-back atmosphere, and experience the thrill of surfing at Cloud 9, making Siargao a must-visit destination for beach lovers and surf enthusiasts alike.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mountains/Hiking Category -->
+                <div class="category-table">
+                    <div class="category-header">Mountains/Hiking Spots</div>
+                    <div class="spots-container">
+                        <div class="spot-card">
+                            <img src="rice terraces.jpg" alt="Banaue Rice Terraces">
+                            <div class="spot-card-content">
+                                <b>Banaue Rice Terraces, Ifugao</b>
+                                <p>Hiking through Banaue's breathtaking rice terraces, carved into the mountainsides centuries ago by skilled Ifugao tribes. The views are simply breathtaking, and you'll feel like you've stepped back in time.</p>
+                            </div>
+                        </div>
+                        <div class="spot-card">
+                            <img src="mayon.jpg" alt="Mayon Volcano">
+                            <div class="spot-card-content">
+                                <b>Mayon Volcano, Albay, Bicol</b>
+                                <p>Mayon Volcano is one of the most beautiful places to visit in the Philippines and is a top attraction in any Bicol tour. Its sheer beauty (the name Mayon comes from the Bicolano word 'magayon,' which means beautiful) hides a violent core, with past eruptions that flattened several towns.</p>
+                            </div>
+                        </div>
+                        <div class="spot-card">
+                            <img src="tagaytay.jpg" alt="Taal Volcano">
+                            <div class="spot-card-content">
+                                <b>Taal Volcano and Lake, Tagaytay</b>
+                                <p>Embark on a serene escape to Tagaytay, renowned for its cool climate and captivating scenery. Stay at the best hotels with panoramic views of Taal Volcano, a small yet active marvel nestled within a lake on an island. Indulge in delectable Bulalo dishes, adding a flavorful touch to your visit in this picturesque haven.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Historical Spots Category -->
+                <div class="category-table">
+                    <div class="category-header">Historical Spots/Provinces</div>
+                    <div class="spots-container">
+                        <div class="spot-card">
+                            <img src="intra.jpg" alt="Intramuros">
+                            <div class="spot-card-content">
+                                <b>Intramuros and Fort Santiago, Manila</b>
+                                <p>Take a stroll through history lane within the walled city of Intramuros in Manila, one of the top landmarks in the Philippines. This 64-hectare Spanish fortress was erected by Miguel Lopez de Legazpi and was destroyed by the end of World War II.</p>
+                            </div>
+                        </div>
+                        <div class="spot-card">
+                            <img src="rizal.jpg" alt="Rizal Park">
+                            <div class="spot-card-content">
+                                <b>Rizal Park, Manila</b>
+                                <p>The park has the Rizal Monument, marking where the national hero, Dr. Jose Rizal, was executed. With beautiful gardens, ponds, and a dancing fountain at sunset, it's a peaceful spot by Manila Bay to enjoy and learn about the country's past.</p>
+                            </div>
+                        </div>
+                        <div class="spot-card">
+                            <img src="vigan.jpg" alt="Calle Crisologo">
+                            <div class="spot-card-content">
+                                <b>Calle Crisologo, Vigan</b>
+                                <p>The town famous for its Calle Crisologo tour has successfully managed to preserve the historic district where you can still find calesas (horse-drawn carriages). Sample the famous and delicious Ilocos empanada and walk along cobbled streets lined with souvenir shops selling pottery and Abel Iloko weaves.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wow-line"></div>
+
+            <!-- THAILAND SECTION -->
+            <div class="country-section">
+                <div class="country-intro">
+                    <img src="thailand.jpg" alt="Thailand">
+                    <div class="country-intro-text">
+                        <b>THAILAND</b>
+                        <p>A journey to Thailand guarantees a magical fusion of stunning beaches, rich cultural encounters, and awe-inspiring scenery. From the powdery white sands to the crystalline waters, Thailand's beaches offer a haven for sun enthusiasts. Dive into historical landmarks, vibrant markets, and lively festivals that celebrate the diverse tapestry of Thai heritage. Beyond the breathtaking landscapes, it's the genuine hospitality of the Thai people that transforms a visit to Thailand into a memorable and heartwarming adventure.</p>
+                    </div>
+                </div>
+
+                <div class="category-table">
+                    <div class="category-header">Must-Visit Attractions</div>
+                    <div class="spots-container">
+                        <div class="spot-card">
+                            <img src="bangkok.jpg" alt="Bangkok">
+                            <div class="spot-card-content">
+                                <b>Bangkok</b>
+                                <p>A city that never sleeps, Bangkok, the capital of Thailand is a modern-day melting pot of contrasting cultures and faiths. Here, towering skyscrapers stand in harmony next to temples and monasteries. The luxury malls and shopping centres compete with the street bazaars and floating markets. Cuisines - both Thai and from around the world are showcased in all their glory on the streets as well as in rooftop restaurants.</p>
+                            </div>
+                        </div>
+                        <div class="spot-card">
+                            <img src="palace.jpg" alt="Grand Palace">
+                            <div class="spot-card-content">
+                                <b>The Grand Palace</b>
+                                <p>The Grand Palace of Bangkok is a grand old dame indeed, that continues to have visitors in awe with its beautiful architecture and intricate detail, all of which is a proud salute to the creativity and craftsmanship of the Thai people. Within its walls were also the Thai war ministry, state departments, and even the mint. Today, the complex remains the spiritual heart of the Thai Kingdom.</p>
+                            </div>
+                        </div>
+                        <div class="spot-card">
+                            <img src="cha.jpg" alt="Chatuchak Market">
+                            <div class="spot-card-content">
+                                <b>Chatuchak Weekend Market</b>
+                                <p>At this colossal market, scout for local delicacies, clothing, second-hand merchandise, home decor, handicrafts, antiques, and even plants. You can also enjoy a soothing Thai massage after shopping. Navigating the market can be slightly overwhelming, so snap a picture of the schematic map that shows you what you can find in each section.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wow-line"></div>
+
+            <!-- SOUTH KOREA SECTION -->
+            <div class="country-section">
+                <div class="country-intro">
+                    <img src="south.jpg" alt="South Korea">
+                    <div class="country-intro-text">
+                        <b>SOUTH KOREA</b>
+                        <p>It offers a captivating blend of ancient traditions and cutting-edge modernity. Immerse yourself in the vibrant energy of Seoul's bustling metropolis, where sleek skyscrapers coexist with historic palaces and lively street markets. From the serene beauty of ancient temples to the dynamic K-pop culture, South Korea promises a diverse and enriching travel experience that seamlessly bridges the gap between tradition and innovation.</p>
+                    </div>
+                </div>
+
+                <div class="category-table">
+                    <div class="category-header">Top Attractions</div>
+                    <div class="spots-container">
+                        <div class="spot-card">
+                            <img src="tower.jpg" alt="N Seoul Tower">
+                            <div class="spot-card-content">
+                                <b>N Seoul Tower</b>
+                                <p>N Seoul Tower, perched atop Namsan Mountain, provides panoramic views of Seoul's sprawling cityscape, making it a must-visit destination for breathtaking vistas. Whether day or night, the tower's observation decks offer a mesmerizing experience, showcasing the city's modern skyline and the scenic Han River against a backdrop of majestic mountains.</p>
+                            </div>
+                        </div>
+                        <div class="spot-card">
+                            <img src="Gyeongbokgung.jpg" alt="Gyeongbokgung Palace">
+                            <div class="spot-card-content">
+                                <b>Gyeongbokgung Palace</b>
+                                <p>Gyeongbokgung Palace in South Korea stands as a majestic symbol of the country's rich history and royal heritage. Explore its grand architecture and expansive grounds to witness the meticulous preservation of traditional Korean culture, offering a captivating journey back in time amid the heart of Seoul.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-name">Made by: Nisi Ashley B. Viloria</div>
+        <div class="footer-contact">Contact: <a href="mailto:nisiashleybviloria@iskolarngbayan.pup.edu.ph">My Email</a></div>
+    </footer>
+</body>
+
+</html>

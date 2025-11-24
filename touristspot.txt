@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>pack n'fly.com</title>
+    <style>
+        body {
+             margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100%;
+            flex-direction: column;
+        }
+
+        .first-bg {
+    background: url('destination.jpg') no-repeat;
+    background-size: cover;
+	background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    display: flex;
+	flex-direction: column; 
+	
+}
+
+.second-bg {
+    background: url('secondbg.jpg') no-repeat;
+    background-size: cover;
+	background-attachment: fixed;
+    height: 670%;
+    width: 100%;
+    display: flex;
+	flex-direction: column;
+	position: relative; 
+}
+
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-7530px);
+            }
+        }
+
+        .navbar {
+            width: 85%;
+            margin: auto;
+            padding: 25px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 120px;
+            height: auto;
+            cursor: pointer;
+        }
+
+
+        .navbar ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar ul li {
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .navbar ul li::after {
+            content: '';
+            height: 3px;
+            width: 0;
+            background: #1B826E;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: 0.5s;
+        }
+
+        .navbar ul li:hover::after {
+            width: 100%;
+        }
+
+        .logo {
+            width: 120px;
+            height: auto;
+            cursor: pointer;
+        }
+        .wow-line {
+            width: 100%;
+            border-top: 3px solid #1B826E;
+            margin: 10px;
+        }
+		.second-bg h2{
+			font-family: 'Andalé Mon', monospace;
+            font-size: 25px;
+            font-weight: 600;
+			color: #0DA183;
+            margin-bottom: 10px;
+            text-align: left; 
+			padding: 20px;
+			}
+			.second-bg h2 strong {
+		color: #0DA183;
+			}
+			.second-bg h3{
+			font-family: 'Optima', sans-serif;
+            font-size: 30px;
+			color: #0DA183;
+            font-weight: 600;
+            text-align: left; 
+			padding: 20px;
+			}
+			.second-bg h3 strong {
+		color: #0DA183;
+		}
+		.second-bg p{
+		color: black ;
+            text-align: justify;
+            padding: 10px;
+            font-family: serif;
+            font-size: 35px;
+            align-self: flex-start; 
+			}
+			footer {
+        
+        background-color: #2C3E50;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .footer-name {
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+    }
+
+    .footer-contact {
+	text-decoration: underline; 
+        font-size: 16px;
+        color: white;
+    }
+    .footer-contact a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .footer-contact a:hover {
+        color: #fff;
+    }
+    </style>
+</head>
+
+<body>
+	<div class="first-bg"> 
+    <div class="banner">
+            <div class="navbar">
+                <img src="logo.png" class="logo">
+                <ul>
+                    <li><a href="assesment5.html">HOME</a></li>
+                    <li>
+                         <a href="touristspot.html" >TOURIST SPOT</a>
+                    </li>
+                    <li><a href="hotelwebpage.html" target="_blank">PLACE TO STAY</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="second-bg">
+        <!-- Content for the second section -->
+        <h2><strong style="color: black;">BEST</strong> DESTINATIONS</h2>
+		<h3><strong style="color: black;">WHERE DO YOU </br> WANT TO</strong> GO?</h3>
+		<div style="align-items: top;">
+	<img src="phil.jpg" width="250" height="300" hspace="35" style="float: left;">
+	<div>
+		<b>PHILIPPINES</b>
+		<p style="font-size: 18px;  text-align: justify; width: 1050px;">
+			A visit to the Philippines promises an enchanting blend of pristine beaches, vibrant
+			cultural experiences, and breathtaking landscapes. With its powdery white sands and crystal-clear waters,
+			the country's beaches are a paradise for sun-seekers. Explore historical sites, bustling markets, and lively 
+			festivals that showcase the rich tapestry of Filipino heritage.
+			Beyond the scenery, it's the warm hospitality of the people that makes a trip to the Philippines an unforgettable and heartwarming experience.
+		</p>
+		</a>
+	</div>
+</div>
+<table width="1000" align="center" >
+    <tr>
+        <th colspan="3" align="center">Island</th>
+    </tr>
+    <tr>
+        <td align="left" style="padding: 10px;"> <img src="coron.jpg" height="300" width="350"> <b>Kayangan Lake, Coron, Palawan</b></br>Kayangan Lake in Coron, Palawan, is a captivating destination celebrated for its stunning lagoon with vibrant blues and greens. The crystal-clear waters hide captivating rock formations, making it a popular spot for snorkeling and free-diving in Coron Palawan.</td>
+        <td align="left" style="padding: 10px;"> <img src="puerto.jpg" height="300" width="350"><b>Puerto Princesa Underground River</b></br> A UNESCO World Heritage Site and one of the longest underground rivers in the world. Take a boat ride through the cave system, marveling at the stalactites, and spot unique wildlife like bats and freshwater crocodiles. The river's complex ecosystem has adapted to the underground environments over hundreds of years. </td>
+        <td align="left" style="padding: 10px;"> <img src="siargao.jpg" height="300" width="350"><b>Siargao Island, Philippines</b></br>Siargao Island in the Philippines is a tropical paradise renowned for its pristine beaches and world-class surfing waves. Explore the island's vibrant landscapes, indulge in its laid-back atmosphere, and experience the thrill of surfing at Cloud 9, making Siargao a must-visit destination for beach lovers and surf enthusiasts alike. It has also gained worldwide recognition due to its thick, hollow tubes and fast-barreling right-hand waves that break over a reef. </td>
+    </tr>
+    <tr>
+        <th colspan="3" align="center">Mountains/Hikings spot</th>
+    </tr>
+   <tr>
+        <td align="left" style="padding: 10px;"> <img src="rice terraces.jpg" height="300" width="350"> <b>Banaue rice terraces, Ifugao, Philippines</b></br>Hiking through Banaue's breathtaking rice terraces, carved into the mountainsides centuries ago by skilled Ifugao tribes. The views are simply breathtaking, and you'll feel like you've stepped back in time.</td>
+        <td align="left" style="padding: 10px;"> <img src="mayon.jpg" height="300" width="350"><b>Mayon Volcano, Albay, Bicol</b></br> Mayon Volcano is one of the most beautiful places to visit in the Philippines and is a top attraction in any Bicol tour. Its sheer beauty (the name Mayon comes from the Bicolano word ‘magayon,’ which means beautiful) hides a violent core, with past eruptions that flattened several towns.td>
+        <td align="left" style="padding: 10px;"> <img src="tagaytay.jpg" height="300" width="350"><b>Taal Volcano and Lake, Tagaytay, and Batangas</b></br>Embark on a serene escape to Tagaytay, renowned for its cool climate and captivating scenery. Stay at the best hotels with panoramic views of Taal Volcano, a small yet active marvel nestled within a lake on an island. Indulge in delectable Bulalo dishes, adding a flavorful touch to your visit in this picturesque haven. Taal. it is a large caldera in Batangas that was formed by prehistoric eruptions. In the wake of the eruptions, it was eventually filled by Taal Lake</td>
+    </tr>
+    <tr>
+        <th colspan="3" align="center">Historical spot/Province</th>
+    </tr>
+    <tr>
+        <td align="left" style="padding: 10px;"> <img src="intra.jpg" height="300" width="350"> <b>Intramuros and Fort Santiago, Manila</b></br>Take a stroll through history lane within the walled city of Intramuros in Manila, one of the top landmarks in the Philippines. This 64-hectare Spanish fortress was erected by Miguel Lopez de Legazpi and was destroyed by the end of World War II.</td>
+        <td align="left" style="padding: 10px;"> <img src="rizal.jpg" height="300" width="350"><b>Rizal Park, Manila</b></br> The park has the Rizal Monument, marking where the national hero, Dr. Jose Rizal, was executed. With beautiful gardens, ponds, and a dancing fountain at sunset, it's a peaceful spot by Manila Bay to enjoy and learn about the country's past.</td>
+        <td align="left" style="padding: 10px;"> <img src="vigan.jpg" height="300" width="350"><b>Calle Crisologo, Vigan</b></br>The town famous for its Calle Crisologo tour has successfully managed to preserve the historic district where you can still find calesas (horse-drawn carriages). Sample the famous and delicious Ilocos empanada and walk along cobbled streets lined with souvenir shops selling pottery and Abel Iloko weaves.</td>
+    </tr>
+</table>
+<div class="wow-line"></div>
+<div style="align-items: top;">
+	<img src="thailand.jpg" width="250" height="300" hspace="35" style="float: left;">
+	<div>
+		<b>THAILAND</b>
+		<p style="font-size: 18px;  text-align: justify; width: 1000px;">
+			A journey to Thailand guarantees a magical fusion of stunning beaches, rich cultural encounters, and awe-inspiring scenery. 
+			From the powdery white sands to the crystalline waters, Thailand's beaches offer a haven for sun enthusiasts. Dive into historical landmarks, 
+			vibrant markets, and lively festivals that celebrate the diverse tapestry of Thai heritage. Beyond the breathtaking landscapes, 
+			it's the genuine hospitality of the Thai people that transforms a visit to Thailand into a memorable and heartwarming adventure.
+			</p>
+	</div>
+	
+<table width="1000" align="center" >
+    
+    <tr>
+	
+    <tr>
+        <td align="left" style="padding: 10px;"> <img src="bangkok.jpg" height="300" width="350"> <b>Bangkok</b></br>A city that never sleeps, Bangkok, the capital of Thailand is a modern-day melting pot of contrasting cultures and faiths. Here, towering skyscrapers stand in harmony next to temples and monasteries. The luxury malls and shopping centres compete with the street bazaars and floating markets. Cuisines - both Thai and from around the world are showcased in all their glory on the streets as well as in rooftop restaurants.</td>
+       <td align="left" style="padding: 10px;"> <img src="palace.jpg" height="300" width="350"> <b>The Grand Palace</b></br>The Grand Palace of Bangkok is a grand old dame indeed, that continues to have visitors in awe with its beautiful architecture and intricate detail, all of which is a proud salute to the creativity and craftsmanship of the Thai people. Within its walls were also the Thai war ministry, state departments, and even the mint. Today, the complex remains the spiritual heart of the Thai Kingdom.</td>
+	   <td align="left" style="padding: 10px;"> <img src="cha.jpg" height="300" width="350"> <b>Chatuchak Weekend Market</b></br>At this colossal market, scout for local delicacies, clothing, second-hand merchandise, home decor, handicrafts, antiques, and even plants. You can also enjoy a soothing Thai massage after shopping. Navigating the market can be slightly overwhelming, so snap a picture of the schematic map that shows you what you can find in each section.</td>
+	   </tr>
+    
+        </tr>
+    
+</table>
+<div class="wow-line"></div>
+<div style="align-items: top;">
+	<img src="south.jpg" width="250" height="300" hspace="35" style="float: left;">
+	<div>
+		<b>SOUTH KOREA</b>
+		<p style="font-size: 18px;  text-align: justify; width: 1000px;">
+			it offers a captivating blend of ancient traditions and cutting-edge modernity. 
+			Immerse yourself in the vibrant energy of Seoul's bustling metropolis, where sleek skyscrapers coexist 
+			with historic palaces and lively street markets. From the serene beauty of ancient temples to the dynamic K-pop culture, 
+			South Korea promises a diverse and enriching travel experience that seamlessly bridges the gap between tradition and innovation.
+			</p>
+	</div>
+	
+<table width="1000" align="center" >
+    
+    <tr>
+	
+    <tr>
+        <td align="left" style="padding: 10px;"> <img src="tower.jpg" height="300" width="350"></br> <b>N Seoul Tower</b></br>N Seoul Tower, perched atop Namsan Mountain, provides panoramic views of Seoul's sprawling cityscape, making it a must-visit destination for breathtaking vistas. Whether day or night, the tower's observation decks offer a mesmerizing experience, showcasing the city's modern skyline and the scenic Han River against a backdrop of majestic mountains.</td>
+       <td align="left" style="padding: 10px;"> <img src="Gyeongbokgung.jpg" height="300" width="350"> <b>Gyeongbokgung Palace</b></br>Gyeongbokgung Palace in South Korea stands as a majestic symbol of the country's rich history and royal heritage. Explore its grand architecture and expansive grounds to witness the meticulous preservation of traditional Korean culture, offering a captivating journey back in time amid the heart of Seoul.</td>
+	   
+	   </tr>
+        </tr>
+    
+</table>
+
+    </div>
+</div>
+</div>
+<footer>
+    <div class="footer-name">Made by: Nisi Ashley B. Viloria</div>
+    <div class="footer-contact">Contact: <a href="mailto:nisiashleybviloria@iskolarngbayan.pup.edu.ph">My Email</a></div>
+</footer>
+</body>
+
+</html>

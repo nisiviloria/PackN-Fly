@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pack n'fly.com - Explore</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Verdana', sans-serif;
+            background-image: url('wow.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            width: 85%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 120px;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+        }
+
+        .navbar ul li {
+            position: relative;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar ul li::after {
+            content: '';
+            height: 3px;
+            width: 0;
+            background: #1B826E;
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            transition: width 0.4s ease;
+        }
+
+        .navbar ul li:hover::after {
+            width: 100%;
+        }
+
+        .main-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .explore-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-bottom: 50px;
+        }
+
+        .explore-section h2 {
+            font-family: 'Arial Black', sans-serif;
+            font-size: clamp(36px, 5vw, 60px);
+            color: #0DA183;
+            font-weight: 700;
+            margin-bottom: 25px;
+            transition: all 0.5s ease;
+        }
+
+        .explore-section h2:hover {
+            -webkit-text-stroke: 2px #0DA183;
+            color: transparent;
+        }
+
+        .explore-section p {
+            color: #2C3E50;
+            font-size: 20px;
+            line-height: 1.8;
+            max-width: 800px;
+        }
+
+        .cards-section {
+            margin-top: 40px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            height: 300px;
+            background-position: center;
+            background-size: cover;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .card:hover::before {
+            opacity: 0.5;
+        }
+
+        .card-label {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            z-index: 1;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .explore-section {
+                padding: 30px 20px;
+            }
+
+            .explore-section h2 {
+                font-size: 32px;
+            }
+
+            .explore-section p {
+                font-size: 18px;
+            }
+
+            .cards-container {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 20px;
+            }
+
+            .card {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cards-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="logo.png" alt="Logo" class="logo">
+            <ul>
+                <li><a href="assesment5.html">HOME</a></li>
+                <li><a href="touristspot.html">TOURIST SPOT</a></li>
+                <li><a href="hotelwebpage.html">PLACE TO STAY</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="explore-section">
+            <h2>TOP 10 Best Asian Countries to Visit</h2>
+            <p>
+                Discover Asia's wonders with us! Immerse yourself in rich cultures,
+                savor exotic cuisines, and explore breathtaking landscapes.
+                Our travel agency crafts unforgettable experiences, ensuring your
+                journey through Asia is nothing short of extraordinary.
+            </p>
+        </div>
+
+        <div class="cards-section">
+            <h3 class="section-title">Explore Amazing Destinations</h3>
+            <div class="cards-container">
+                <div class="card" style="background-image: url('phil.jpg');">
+                    <div class="card-label">Philippines</div>
+                </div>
+                <div class="card" style="background-image: url('thailand.jpg');">
+                    <div class="card-label">Thailand</div>
+                </div>
+                <div class="card" style="background-image: url('viet.jpg');">
+                    <div class="card-label">Vietnam</div>
+                </div>
+                <div class="card" style="background-image: url('south.jpg');">
+                    <div class="card-label">South Korea</div>
+                </div>
+                <div class="card" style="background-image: url('singa.jpg');">
+                    <div class="card-label">Singapore</div>
+                </div>
+                <div class="card" style="background-image: url('sri.jpg');">
+                    <div class="card-label">Sri Lanka</div>
+                </div>
+                <div class="card" style="background-image: url('cambodia.jpg');">
+                    <div class="card-label">Cambodia</div>
+                </div>
+                <div class="card" style="background-image: url('china.jpg');">
+                    <div class="card-label">China</div>
+                </div>
+                <div class="card" style="background-image: url('indo.jpg');">
+                    <div class="card-label">Indonesia</div>
+                </div>
+                <div class="card" style="background-image: url('nepal.jpg');">
+                    <div class="card-label">Nepal</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

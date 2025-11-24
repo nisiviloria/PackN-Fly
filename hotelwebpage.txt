@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>pack n'fly.com</title>
+    <style>
+        body {
+             margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100%;
+            flex-direction: column;
+        }
+
+        .first-bg {
+    background: url('firststay.jpg') no-repeat;
+    background-size: cover;
+	background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    display: flex;
+	flex-direction: column; 
+	
+}
+
+.second-bg {
+    background: url('secondgreen.jpg') no-repeat;
+    background-size: cover;
+	background-attachment: fixed;
+    height: 360%;
+    width: 100%;
+    display: flex;
+	flex-direction: column;
+	position: relative; 
+}
+		.logo {
+            width: 120px;
+            height: auto;
+            cursor: pointer;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-7530px);
+            }
+        }
+
+        .navbar {
+            width: 85%;
+            margin: auto;
+            padding: 25px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 120px;
+            height: auto;
+            cursor: pointer;
+        }
+
+
+        .navbar ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar ul li {
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #2C3E50;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .navbar ul li::after {
+            content: '';
+            height: 3px;
+            width: 0;
+            background: #1B826E;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: 0.5s;
+        }
+
+        .navbar ul li:hover::after {
+            width: 100%;
+        }
+
+        .logo {
+            width: 120px;
+            height: auto;
+            cursor: pointer;
+        }
+		.second-bg h2{
+			font-family: 'Andalé Mon', monospace;
+            font-size: 25px;
+            font-weight: 600;
+			color: #0DA183;
+            margin-bottom: 10px;
+            text-align: center; 
+			padding: 20px;
+			}
+		
+		.second-bg p{
+		color: black ;
+            text-align: justify;
+            padding: 10px;
+            font-family: serif;
+            font-size: 28px;
+            align-self: flex-start; 
+			}
+	
+	a:focus, a:active {
+        outline: none;
+    }
+
+    a {
+        text-decoration: underline; 
+        color: #2C3E50; 
+		transition: color 0.3s ease;  
+		}
+
+    a:hover {
+        color: #117864;
+    }
+	 footer {
+        margin-top: 50px;
+        background-color: #2C3E50;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .footer-name {
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+    }
+
+    .footer-contact {
+	text-decoration: underline; 
+        font-size: 16px;
+        color: white;
+    }
+    .footer-contact a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .footer-contact a:hover {
+        color: #fff;
+    }
+	
+</style>
+
+    
+</head>
+
+<body>
+	<div class="first-bg"> 
+    <div class="banner">
+            <div class="navbar">
+                <img src="wow1.png" class="logo">
+                <ul>
+                    <li><a href="assesment5.html">HOME</a></li>
+                    <li>
+                         <a href="touristspot.html">TOURIST SPOT</a>
+                    </li>
+                    <li><a href="hotelwebpage.html">PLACE TO STAY</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="second-bg">
+	        <h2><strong style="color: black;">HOTEL IN PHILIPPINES</h2>
+
+<div style="align-items: top; margin-bottom: 100px;">
+	<img src="okada.jpg" width="250" height="250" hspace="35" style="float: left;">
+	<div>
+		<b style="font-size: 25px;">Okada Manila Hotel</b>
+		<p style="font-size: 18px;  text-align: justify; width: 1050px;">
+			Staying at Okada Hotel provides an exquisite and luxurious experience, where impeccable hospitality meets world-class amenities. 
+			Enjoy breathtaking views, indulge in fine dining, and immerse yourself in a lavish atmosphere, creating unforgettable memories during your 
+			stay in the epitome of opulence</br>
+		</p>
+		</a>
+		
+		<a href="https://www.okadamanila.com/">More info about them</a><br></br>
+
+		<a href="mailto:restaurantreservation@okadamanila.com">Email them now</a><br>
+		
+	</div>
+</div>
+
+<div style="align-items: top;">
+	<img src="hotel1.jpg" width="250" height="250" hspace="35" style="float: left;" align ="middle">
+	<div>
+		<b style="font-size: 25px;">The Funny Lion - Coron</b>
+		<p style="font-size: 18px;  text-align: justify; width: 1050px;">
+			The Funny Lion - Coron boasts of an outdoor swimming pool, an open air bath featuring natural views, and dining options on-site, this 4-star resort is 1.5 km from Mount Tapyas and 6.5 km from Kayangan Lake in Coron. WiFi is available for free throughout the property.
+			Elegantly furnished with natural color hues, all rooms at The Funny Lion - Coron come with a flat-screen TV with cable channels, a safety deposit box, and a work desk. Other in-room amenities include an electric kettle, a minibar, and a tea/coffee maker.
+		</p>
+		</a>
+		<a href="https://www.thefunnylion.com/?gclid=CjwKCAiA5L2tBhBTEiwAdSxJX_Xn8KdokwqFP8FcG0hH6JRUhLjpXoW2S0anxomHnLLO5ShyeGpW_RoCWKcQAvD_BwE">More info about them</a><br></br>
+		<a href="mailto:elnido.inquiries@thefunnylion.com">Email them now</a><br>
+		
+	</div>
+</div>
+
+	        <h2><strong style="color: black;">HOTEL IN THAILAND</h2>
+
+<div style="align-items: top; margin-bottom: 100px;">
+	<img src="hotel2.jpg" width="250" height="250" hspace="35" style="float: left;">
+	<div>
+		<b style="font-size: 25px;">Staybridge Suites Bangkok Sukhumvit</b>
+		<p style="font-size: 18px;  text-align: justify; width: 1050px;">
+			Staybridge Suites Bangkok Sukhumvit promises a stay of comfort and convenience with spacious suites, 
+			modern amenities, and a rooftop pool boasting city views. Ideal for those seeking a home-like atmosphere in the heart 
+			of Bangkok's vibrant shopping and entertainment hubs.</br>
+		</p>
+		</a>
+		
+		<a href="https://www.ihg.com/staybridge/hotels/gb/en/bangkok/bkkpp/hoteldetail?fromRedirect=true&qSrt=sBR&qIta=99617302&icdv=99617302&qDest=Bangkok,%20Thailand&setPMCookies=true&mktgvar=go_cmp-18137115599_adg-140959862552_ad-618752733963_aud-907233851918:kwd-10243211_dev-c_ext-_sig-CjwKCAiA5L2tBhBTEiwAdSxJX1rAaTc5L0UNI3bbACzVA-T1Nx_ARSv78mBIFU5Q-bLTptSKonybjxoCv6YQAvD_BwE&dp=true&gclid=CjwKCAiA5L2tBhBTEiwAdSxJX1rAaTc5L0UNI3bbACzVA-T1Nx_ARSv78mBIFU5Q-bLTptSKonybjxoCv6YQAvD_BwE&cm_mmc=PDSEA-_-G_F-SEAK_FS-SEA_H-SEAK_HS-THA_SB_NBI_EXM_HOTEL-BKKPP&srb_u=1&qChAge=&qRad=30&qRdU=mi">More info about them</a><br></br>
+
+		<a href="mailto:reservation@StaybridgeSuitesbangkokSukhumvit.com">Email them now</a><br>
+		
+	</div>
+</div>
+
+<div style="align-items: top;">
+	<img src="hotel3.jpg" width="250" height="250" hspace="35" style="float: left;" align ="middle">
+	<div>
+		<b style="font-size: 25px;">InterContinental Bangkok</b>
+		<p style="font-size: 18px;  text-align: justify; width: 1050px;">
+			InterContinental Bangkok offers a luxurious escape in the heart of the city, 
+			blending contemporary elegance with top-notch services. With its central location, exquisite dining options, 
+			and stylish accommodations, it's the perfect choice for a sophisticated stay in Bangkok.</p>
+		</a>
+		<a href="https://www.ihg.com/intercontinental/hotels/gb/en/bangkok/bkkhb/hoteldetail?fromRedirect=true&qSrt=sBR&qIta=99617302&icdv=99617302&qDest=Bangkok,%20Thailand&setPMCookies=true&mktgvar=go_cmp-20773735127_adg-155794824939_ad-684397957897_aud-482218177342:kwd-303877167588_dev-c_ext-_sig-CjwKCAiA5L2tBhBTEiwAdSxJX9QTa9AU41g35tpN0AuMkdj1u7kdolsSzae4y2uSyp5bN9SdpzDjHhoCR6oQAvD_BwE&dp=true&gclid=CjwKCAiA5L2tBhBTEiwAdSxJX9QTa9AU41g35tpN0AuMkdj1u7kdolsSzae4y2uSyp5bN9SdpzDjHhoCR6oQAvD_BwE&cm_mmc=PDSEA-_-G_F-SEAK_FS-SEA_H-SEAK_HS-THA_IC_NBI_EXM_HOTEL-BKKTL&srb_u=1&qChAge=&qRad=30&qRdU=mi">More info about them</a><br></br>
+		<a href="mailto:elnido.inquiries@InterContinentalBangkok.com">Email them now</a><br>
+		
+	</div>
+</div>
+
+
+	        <h2><strong style="color: black;">HOTEL IN SOUTH KOREA</h2>
+
+<div style="align-items: top; margin-bottom: 100px;">
+	<img src="hotel4.jpg" width="250" height="250" hspace="35" style="float: left;">
+	<div>
+		<b style="font-size: 25px;">InterContinental Seoul COEX</b>
+		<p style="font-size: 18px;  text-align: justify; width: 1050px;">
+			InterContinental Seoul COEX provides a refined urban retreat with modern amenities and 
+			seamless hospitality. Its prime location near COEX Mall and elegant surroundings make it an ideal 
+			choice for a stylish and convenient stay in Seoul.</br>
+		</p>
+		</a>
+		
+		<a href="https://www.ihg.com/intercontinental/hotels/gb/en/seoul/seohb/hoteldetail?fromRedirect=true&qSrt=sBR&qIta=99617302&icdv=99617302&qDest=seoul,%20Korea,%20Republic%20of&setPMCookies=true&mktgvar=go_cmp-11792970957_adg-115952687898_ad-484786447659_aud-482218177342:kwd-299981448624_dev-c_ext-_sig-CjwKCAiA5L2tBhBTEiwAdSxJXwpLScsdAuVsmgJjbv8NKjXlPsi88laMujopTIGI8x0Q1S3-MZzl_BoCgOcQAvD_BwE&dp=true&gclid=CjwKCAiA5L2tBhBTEiwAdSxJXwpLScsdAuVsmgJjbv8NKjXlPsi88laMujopTIGI8x0Q1S3-MZzl_BoCgOcQAvD_BwE&cm_mmc=PDSEA-_-G_F-SEAK_FS-SEA_H-SEAK_HS-KOR_IC_NBI_EXM_HOTEL-SEOHB&srb_u=1&qChAge=&qRad=30&qRdU=mi">More info about them</a><br></br>
+
+		<a href="mailto:reservation@StaybridgeSuitesbangkokSukhumvit.com">Email them now</a><br>
+		
+	</div>
+</div>
+
+<div style="align-items: top;">
+	<img src="hotel5.jpg" width="250" height="250" hspace="35" style="float: left;" align ="middle">
+	<div>
+		<b style="font-size: 25px;">Nine Tree Premier Hotel Insadong</b>
+		<p style="font-size: 18px;  text-align: justify; width: 1050px;">
+			Nine Tree Premier Hotel Insadong offers a perfect blend of comfort and cultural charm 
+			in the heart of Seoul's vibrant Insadong district. With stylish accommodations and proximity to cultural
+			attractions, it provides an enriching and convenient stay for travelers exploring the city.</p>
+		</a>
+		<a href="https://www.ninetreehotels.com/main/pages/index.html">More info about them</br></br>
+		<a href="mailto:reservation@ninetreehotel.com">Email them now</a><br>
+		
+	</div>
+</div>
+<footer>
+    <div class="footer-name">Made by: Nisi Ashley B. Viloria</div>
+    <div class="footer-contact">Contact: <a href="mailto:nisiashleybviloria@iskolarngbayan.pup.edu.ph">My Email</a></div>
+</footer>
+
+</body>
+
+</html>
